@@ -8,8 +8,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.tables t 
     JOIN INFORMATION_SCHEMA.columns c ON t.table_schema = c.table_schema AND t.table_name = c.table_name 
-WHERE 
-    t.table_schema NOT IN ('information_schema', 'pg_catalog') 
+
 ORDER BY 
     t.table_type, 
     t.table_schema, 
